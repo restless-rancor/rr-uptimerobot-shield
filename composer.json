@@ -3,7 +3,7 @@
     "type": "phpbb-extension",
     "description": "Adds an uptime percentage in the footer using a shields.io image. A Monitor-Specific API key from https://uptimerobot.com is required.",
     "homepage": "https://www.restlessrancor.com",
-    "version": "0.0.1-dev",
+    "version": "0.0.2-dev",
     "time": "2018-11-01",
     "license": "GPL-2.0-only",
     "authors": [
