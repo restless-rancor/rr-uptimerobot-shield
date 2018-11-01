@@ -1,0 +1,10 @@
+services:
+    restlessrancor.uptimerobotshield.listener:
+        class: restlessrancor\uptimerobotshield\event\main_listener
+        arguments:
+            - '@user'
+            - '@template'
+            - '@language'
+            - '@config'
+        tags:
+            - { name: event.listener }

@@ -1,0 +1,42 @@
+{% include 'overall_header.html' %}
+
+<h1>{{ lang('UTROBOT_TITLE') }}</h1>
+
+<form id="acp_board" method="post" action="{{ U_ACTION }}">
+
+	<fieldset>
+		<legend>{{ lang('UTROBOT_TITLE') }} {{ lang('UTROBOT_SETTINGS') }}</legend>
+		<dl>
+			<dt>
+				<label for="utrobot_api">{{ lang('UTROBOT_API') ~ lang('COLON') }}</label><br /><span>{{ lang('UTROBOT_API_EXPLAIN') }}</span>
+			</dt>
+			<dd>
+				<input type="text" name="utrobot_api" id="utrobot_api" class="input" value="{{ UTROBOT_API }}" />
+			</dd>
+		</dl>
+		<dl>
+			<dt>
+				<label for="utrobot_week">{{ lang('UTROBOT_WEEK') }}{{ lang('COLON') }}</label><br /><span>{{ lang('UTROBOT_WEEK_EXPLAIN') }}</span>
+			</dt>
+			<dd>
+				<label><input type="radio" name="utrobot_week" value="1"{% if UTROBOT_WEEK %} checked{% endif %}> {{ lang('YES') }}</label>
+				<label><input type="radio" name="utrobot_week" value="0"{% if not UTROBOT_WEEK %} checked{% endif %}> {{ lang('NO') }}</label>
+			</dd>
+		</dl>
+		<dl>
+			<dt>
+				<label for="utrobot_month">{{ lang('UTROBOT_MONTH') }}{{ lang('COLON') }}</label><br /><span>{{ lang('UTROBOT_MONTH_EXPLAIN') }}</span>
+			</dt>
+			<dd>
+				<label><input type="radio" name="utrobot_month" value="1"{% if UTROBOT_MONTH %} checked{% endif %}> {{ lang('YES') }}</label>
+				<label><input type="radio" name="utrobot_month" value="0"{% if not UTROBOT_MONTH %} checked{% endif %}> {{ lang('NO') }}</label>
+			</dd>
+		</dl>
+	</fieldset>
+	<fieldset class="submit-buttons">
+		<input class="button1" type="submit" id="submit" name="submit" value="{L_SUBMIT}" />
+		{{ S_FORM_TOKEN }}
+	</fieldset>
+</form>
+
+{% include 'overall_footer.html' %}
